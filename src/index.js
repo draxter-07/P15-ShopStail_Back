@@ -2,7 +2,7 @@ import express from "express"
 import cors from "cors"
 import dotenv from "dotenv"
 import { getCarrinho} from "./controllers/controlCarrinho.js"
-import { postCompra } from "./controllers/controlCompra.js"
+import { postCompra } from "./controllers/controlCheckout.js"
 
 dotenv.config();
 
@@ -12,6 +12,6 @@ app.use(cors());
 
 app.get("/carrinho", getCarrinho);
 
-app.post("/compra", postCompra);
+app.post("/checkout", postCheckout);
 
 app.listen(5000, () => console.log("Running on port 5000"));

@@ -9,7 +9,7 @@ const mongoClient = new MongoClient(process.env.DATABASE_URL);
 var db;
 mongoClient.connect().then(db = mongoClient.db());
 
-export function postCompra(){
+export function postCheckout(){
     // Verifica credenciais
     // Verifica os dados de pagamento
     // Envia para a database Venda
